@@ -1,0 +1,8 @@
+D:\Kasper\Kasper\ServerHost\bin\Debug\ServerHost.exe.config
+D:\Kasper\Kasper\ServerHost\bin\Debug\ServerHost.exe
+D:\Kasper\Kasper\ServerHost\bin\Debug\ServerHost.pdb
+D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.csproj.AssemblyReference.cache
+D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.csproj.SuggestedBindingRedirects.cache
+D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.csproj.CoreCompileInputs.cache
+D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.exe
+D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.pdb

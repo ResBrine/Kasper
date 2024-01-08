@@ -1,0 +1,8 @@
+D:\Kasper\Kasper\TestClient\bin\Debug\TestClient.exe.config
+D:\Kasper\Kasper\TestClient\bin\Debug\TestClient.exe
+D:\Kasper\Kasper\TestClient\bin\Debug\TestClient.pdb
+D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.csproj.AssemblyReference.cache
+D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.csproj.SuggestedBindingRedirects.cache
+D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
+D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.exe
+D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.pdb
