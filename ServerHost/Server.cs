@@ -8,16 +8,21 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Threading;
 using System.Net.Http;
+using System.IO;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace ServerHost
 {
     internal class Server
     {
         TcpListener tcpListener;
-        List<TcpClient> tcpClients = new List<TcpClient>();
+        List<Client> clients = new List<Client>();
         Thread threadListConnect;
         Thread threadClientListen;
-        private int CountClients = 0;
+        private int CountClients
+        {
+            get { return clients.Count; }
+        }
         /// <summary>
         /// Создание и настройка сервера
         /// </summary>
@@ -30,13 +35,16 @@ namespace ServerHost
         public void SetMsg(string msg)
         {
             NetworkStream networkStream = null;
-            foreach (TcpClient client in tcpClients)
+            foreach (var item in clients)
             {
-                networkStream = client.GetStream();
+                if(item.tcpClient.Connected == true)
+                networkStream = item.tcpClient.GetStream();
                 byte[] bytes = Encoding.Unicode.GetBytes(msg);
                 if (networkStream != null)
+                {
                     networkStream.Write(bytes, 0, bytes.Length);
-                networkStream.Flush();
+                    networkStream.Flush();
+                }
             }
         }
         public void Start()
@@ -48,40 +56,62 @@ namespace ServerHost
         }
         public void Stop()
         {
-            threadClientListen.Suspend();
-            threadListConnect.Suspend();
-            foreach (var item in tcpClients)
-                item.Close();
+            threadClientListen.Abort();
+            threadListConnect.Abort();
+            foreach (var item in clients)
+                item.tcpClient.Close();
             tcpListener.Stop();
         }
          void ListenConnect()
         {
             while (true)
             {
-                tcpClients.Add(tcpListener.AcceptTcpClient());
+                clients.Add(GetFullDataAboutClient(ClientConnectedNow()));
                 threadClientListen = new Thread(new ThreadStart(ListenClient));
                 threadClientListen.Start();
-                CountClients++;
-                Console.WriteLine("New Client");
+                Console.WriteLine("Connect client: " + clients[CountClients-1].ip+":"+ clients[CountClients - 1].port + " " + clients[CountClients - 1].userName);
             }
+        }
+        TcpClient ClientConnectedNow()
+        {
+            return tcpListener.AcceptTcpClient();
+        }
+        Client GetFullDataAboutClient(TcpClient tcpClient)
+        {
+            byte[] data = new byte[256];
+            int bytes;
+            Client newClient = null;
+            while (true)
+                if ((bytes = tcpClient.GetStream().Read(data, 0, data.Length)) != 0)
+                {
+                    newClient = new Client(tcpClient, Encoding.Unicode.GetString(data, 0, bytes));
+                    break;
+                }
+            return newClient;
         }
 
         void ListenClient()
         {
-            int idClient = CountClients;
-            NetworkStream networkStream = tcpClients[idClient-1].GetStream();
-
-            byte[] data = new byte[1024];
-            int bytes;
-
-            while ((bytes = networkStream.Read(data, 0, data.Length)) != 0)
+            try
             {
-                // Преобразуем данные в ASCII string
-                string responseData = System.Text.Encoding.Unicode.GetString(data, 0, bytes);
-                Console.WriteLine(responseData);
-                // Вызываем метод из основного потока
-                CallBackAll(responseData);
+                Client client = clients[CountClients - 1];
+                NetworkStream networkStream = client.tcpClient.GetStream();
+
+                byte[] data = new byte[1024];
+                int bytes;
+                
+                while ((bytes = networkStream.Read(data, 0, data.Length)) != 0)
+                {
+                    string responseData = Encoding.Unicode.GetString(data, 0, bytes);
+                    Console.WriteLine(client.userName +":" +responseData);
+                    CallBackAll(client.userName + ":" + responseData);
+                }
             }
+            catch (IOException ex)
+            { 
+                Console.WriteLine(ex.Message.ToString());
+            }
+
 
         }
         void CallBackAll(string message)
