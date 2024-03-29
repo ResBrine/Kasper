@@ -15,7 +15,7 @@ namespace ServerHost
 {
     internal class Server
     {
-        TcpListener tcpListener;
+        Socket socket;
         List<Client> clients = new List<Client>();
         Thread threadListConnect;
         Thread threadClientListen;
@@ -29,7 +29,9 @@ namespace ServerHost
         /// <param name="port">Открытый порт для прослушивания клиентов</param>
         public Server(int port)
         {
-            tcpListener = new TcpListener(IPAddress.Any, port);
+            IPEndPoint ipPoint = new IPEndPoint(IPAddress.Any, port);
+            socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socket.Bind(ipPoint);   // связываем с локальной точкой ipPoint
         }
 
         public void SetMsg(string msg)
@@ -38,7 +40,7 @@ namespace ServerHost
             foreach (var item in clients)
             {
                 if(item.tcpClient.Connected == true)
-                networkStream = item.tcpClient.GetStream();
+                networkStream = new NetworkStream(item.tcpClient);
                 byte[] bytes = Encoding.Unicode.GetBytes(msg);
                 if (networkStream != null)
                 {
@@ -49,7 +51,7 @@ namespace ServerHost
         }
         public void Start()
         {
-            tcpListener.Start();
+            socket.Listen(1000);
             threadListConnect = new Thread(new ThreadStart(ListenConnect));
             threadListConnect.Start();
             Console.WriteLine("Start server");
@@ -60,7 +62,7 @@ namespace ServerHost
             threadListConnect.Abort();
             foreach (var item in clients)
                 item.tcpClient.Close();
-            tcpListener.Stop();
+        //    socket.Stop();
         }
          void ListenConnect()
         {
@@ -72,19 +74,19 @@ namespace ServerHost
                 Console.WriteLine("Connect client: " + clients[CountClients-1].ip+":"+ clients[CountClients - 1].port + " " + clients[CountClients - 1].userName);
             }
         }
-        TcpClient ClientConnectedNow()
+        Socket ClientConnectedNow()
         {
-            return tcpListener.AcceptTcpClient();
+            return socket.Accept();
         }
-        Client GetFullDataAboutClient(TcpClient tcpClient)
+        Client GetFullDataAboutClient(Socket client)
         {
             byte[] data = new byte[256];
             int bytes;
             Client newClient = null;
             while (true)
-                if ((bytes = tcpClient.GetStream().Read(data, 0, data.Length)) != 0)
+                if ((bytes = new NetworkStream(client).Read(data, 0, data.Length)) != 0)
                 {
-                    newClient = new Client(tcpClient, Encoding.Unicode.GetString(data, 0, bytes));
+                    newClient = new Client(client, Encoding.ASCII.GetString(data, 0, bytes));
                     break;
                 }
             return newClient;
@@ -95,14 +97,14 @@ namespace ServerHost
             try
             {
                 Client client = clients[CountClients - 1];
-                NetworkStream networkStream = client.tcpClient.GetStream();
+                NetworkStream networkStream = new NetworkStream(client.tcpClient);
 
                 byte[] data = new byte[1024];
                 int bytes;
                 
                 while ((bytes = networkStream.Read(data, 0, data.Length)) != 0)
                 {
-                    string responseData = Encoding.Unicode.GetString(data, 0, bytes);
+                    string responseData = Encoding.ASCII.GetString(data, 0, bytes);
                     Console.WriteLine(client.userName +":" +responseData);
                     CallBackAll(client.userName + ":" + responseData);
                 }

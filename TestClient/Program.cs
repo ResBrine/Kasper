@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace TestClient
 {
@@ -17,7 +17,8 @@ namespace TestClient
         {
             //176,59,76,254
             //new IPEndPoint(new IPAddress(new byte[] { 127,0,0,2 })
-            TcpClient client = new TcpClient("localhost", 8301);
+            
+            TcpClient client = new TcpClient(Console.ReadLine(), 8301);
             stream = client.GetStream();
 
             Thread thread = new Thread(new ThreadStart(ReadStream));
@@ -42,7 +43,7 @@ namespace TestClient
             while ((bytes = stream.Read(data, 0, data.Length)) != 0)
             {
                 // Преобразуем данные в ASCII string
-                string responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                string responseData = Encoding.ASCII.GetString(data, 0, bytes);
                 // Вызываем метод из основного потока
                 MainThreadMethod(responseData);
             }

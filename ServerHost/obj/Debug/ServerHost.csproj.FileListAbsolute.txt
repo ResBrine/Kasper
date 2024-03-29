@@ -6,3 +6,10 @@ D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.csproj.SuggestedBindingRedirect
 D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.csproj.CoreCompileInputs.cache
 D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.exe
 D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.pdb
+D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.exe.config
+D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.exe
+D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.pdb
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.AssemblyReference.cache
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.CoreCompileInputs.cache
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.exe
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.pdb

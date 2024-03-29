@@ -6,3 +6,10 @@ D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.csproj.SuggestedBindingRedirect
 D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
 D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.exe
 D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.pdb
+D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.exe.config
+D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.exe
+D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.pdb
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.AssemblyReference.cache
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.exe
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.pdb

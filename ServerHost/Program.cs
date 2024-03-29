@@ -11,10 +11,12 @@ namespace ServerHost
     {
         static void Main(string[] args)
         {
-            Server server = new Server(8301);
+            int port = 8301;
+            Server server = new Server(port);
             server.Start();
+            Console.WriteLine("PORT:" + port);
 
-           Console.WriteLine("Press any key to exit");
+            Console.WriteLine("Press any key to exit");
            Console.Read();
            
 

@@ -9,16 +9,16 @@ namespace ServerHost
 {
     internal class Client
     {
-        public TcpClient tcpClient;
+        public Socket tcpClient;
         public string ip;
         public int port;
         public string userName;
 
-        public Client(TcpClient client, string Name)
+        public Client(Socket client, string Name)
         {
             tcpClient = client;
-            ip = client.Client.RemoteEndPoint.ToString().Split(':')[0];
-            port = int.Parse(client.Client.RemoteEndPoint.ToString().Split(':')[1]);
+            ip = client.RemoteEndPoint.ToString().Split(':')[0];
+            port = int.Parse(client.RemoteEndPoint.ToString().Split(':')[1]);
             userName = Name;
         }
 
