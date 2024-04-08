@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,13 +14,13 @@ namespace ServerHost
     {
         static void Main(string[] args)
         {
-            int port = 8301;
-            Server server = new Server(port);
+            DataManager.OpenConfigServer();
+            Server server = new Server(INFO.PORT);
             server.Start();
-            Console.WriteLine("PORT:" + port);
-
+            Console.WriteLine("PORT:" + INFO.PORT);
             Console.WriteLine("Press any key to exit");
-           Console.Read();
+
+            Console.Read();
            
 
         }

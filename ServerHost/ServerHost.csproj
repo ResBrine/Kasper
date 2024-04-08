@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIManager.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="Clients.cs" />
+    <Compile Include="INFO.cs" />
+    <Compile Include="DataManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />

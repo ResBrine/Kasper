@@ -9,22 +9,31 @@ namespace ServerHost
 {
     internal class Client
     {
-        public Socket tcpClient;
+        public int id;
+        public Socket socket;
+        public string userName;
+        public string password;
+
+
         public string ip;
         public int port;
-        public string userName;
-
-        public Client(Socket client, string Name)
+        public Client(int id)
         {
-            tcpClient = client;
-            ip = client.RemoteEndPoint.ToString().Split(':')[0];
-            port = int.Parse(client.RemoteEndPoint.ToString().Split(':')[1]);
-            userName = Name;
+            this.id = id;
+        }
+        
+        public void setUserName(string userName)
+        {
+            this.userName = userName;
+        }
+        public void setSocket(Socket socket)
+        {
+            this.socket = socket;
         }
 
-        public void Rename(string Name)
+        public void setPassword(string password)
         {
-            userName = Name;
+            this.password = password;
         }
     }
 }
