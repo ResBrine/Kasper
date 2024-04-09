@@ -47,7 +47,7 @@ namespace ServerHost
 
         }
 
-        public static List<Client> LoadListClients() 
+        public static Clients LoadListClients() 
         {
             if (File.Exists(INFO.PATH_LIST_USERS))
                 using (FileStream fileStream = File.OpenRead(INFO.PATH_LIST_USERS))
@@ -56,13 +56,13 @@ namespace ServerHost
                     fileStream.Read(buffer, 0, buffer.Length); //Чтение всего файла в буфер
                     string textFromFile = Encoding.Default.GetString(buffer); //Конвертация в String буфера
                     Console.WriteLine("Загрузка клиентов");
-                    return GetClients(textFromFile);
+                    return new Clients(GetClients(textFromFile));
                 }
             else
             {
                 Console.WriteLine($"Файл списка пользователей");
                 Console.WriteLine($"Создаётся новый файл списка пользователей по пути {INFO.PATH_LIST_USERS}");
-                SaveListUsers();
+                SaveListClients(new Clients());
                 
             }
 
@@ -125,9 +125,17 @@ namespace ServerHost
 
             return client;
         }
-        public static void SaveListUsers()
+        public static void SaveListClients(Clients clients)
         {
             FileStream fileStream = new FileStream(INFO.PATH_LIST_USERS, FileMode.Create);
+            foreach (var client in clients.GetClients())
+                WriteLine(fileStream, 
+                    $"{client.userName}\r\n" +
+                    "{\r\n" +
+                    $"id={client.id}\r\n" +
+                    $"password={client.password}\r\n" +
+                    "}\r");
+
             fileStream.Close();
 
         }

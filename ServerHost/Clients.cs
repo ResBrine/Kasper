@@ -14,6 +14,10 @@ namespace ServerHost
             get { return clients.Count; }
         }
         public Clients() { }
+        public Clients(List<Client> clients) {
+            Clear();
+            this.clients.AddRange(clients);
+        }
 
         public void AddRange(List<Client> clients)
         {
@@ -50,6 +54,7 @@ namespace ServerHost
             client.setUserName(loginData.userName);
             client.setPassword(loginData.password);
             clients.Add(client);
+            DataManager.SaveListClients(this);
             return client;
         }
     }
