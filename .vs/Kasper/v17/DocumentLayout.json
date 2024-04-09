@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "D:\\GitHub\\Kasper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|D:\\GitHub\\Kasper\\serverhost\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|d:\\github\\kasper\\serverhost\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9B494F-F968-4551-B7D3-EDC2B42BE391}|TestClient\\TestClient.csproj|D:\\GitHub\\Kasper\\testclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9B494F-F968-4551-B7D3-EDC2B42BE391}|TestClient\\TestClient.csproj|solutionrelative:testclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|D:\\GitHub\\Kasper\\serverhost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EC9B494F-F968-4551-B7D3-EDC2B42BE391}|TestClient\\TestClient.csproj|D:\\GitHub\\Kasper\\testclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9B494F-F968-4551-B7D3-EDC2B42BE391}|TestClient\\TestClient.csproj|solutionrelative:testclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|D:\\GitHub\\Kasper\\serverhost\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|d:\\github\\kasper\\serverhost\\apimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\apimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|d:\\github\\kasper\\serverhost\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|d:\\github\\kasper\\serverhost\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|D:\\GitHub\\Kasper\\serverhost\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|D:\\GitHub\\Kasper\\serverhost\\apimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\apimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|d:\\github\\kasper\\serverhost\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED4A9AA5-A82E-41C8-AFD5-0DE7BFF6C382}|ServerHost\\ServerHost.csproj|solutionrelative:serverhost\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 65,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "APIManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\APIManager.cs",
+              "RelativeDocumentMoniker": "ServerHost\\APIManager.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\ServerHost\\APIManager.cs",
+              "RelativeToolTip": "ServerHost\\APIManager.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T11:57:50.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\Client.cs",
               "RelativeDocumentMoniker": "ServerHost\\Client.cs",
@@ -55,20 +68,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\Kasper\\TestClient\\Program.cs",
               "RelativeDocumentMoniker": "TestClient\\Program.cs",
               "ToolTip": "D:\\GitHub\\Kasper\\TestClient\\Program.cs",
               "RelativeToolTip": "TestClient\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAADwvxwAAAAcAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAqwDkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T16:57:52.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\Program.cs",
               "RelativeDocumentMoniker": "ServerHost\\Program.cs",
@@ -87,35 +100,22 @@
               "RelativeDocumentMoniker": "ServerHost\\Server.cs",
               "ToolTip": "D:\\GitHub\\Kasper\\ServerHost\\Server.cs",
               "RelativeToolTip": "ServerHost\\Server.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAuwGgAAABGAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAiwIMAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-24T09:50:09.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "DataManager.cs",
               "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\DataManager.cs",
               "RelativeDocumentMoniker": "ServerHost\\DataManager.cs",
               "ToolTip": "D:\\GitHub\\Kasper\\ServerHost\\DataManager.cs",
               "RelativeToolTip": "ServerHost\\DataManager.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAYwF0AAAAQAAAA",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAIwIkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T15:24:45.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "APIManager.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\APIManager.cs",
-              "RelativeDocumentMoniker": "ServerHost\\APIManager.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ServerHost\\APIManager.cs",
-              "RelativeToolTip": "ServerHost\\APIManager.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAkwA8AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T15:12:28.582Z",
               "EditorCaption": ""
             }
           ]
@@ -126,13 +126,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Clients.cs",
               "DocumentMoniker": "D:\\GitHub\\Kasper\\ServerHost\\Clients.cs",
               "RelativeDocumentMoniker": "ServerHost\\Clients.cs",
               "ToolTip": "D:\\GitHub\\Kasper\\ServerHost\\Clients.cs",
               "RelativeToolTip": "ServerHost\\Clients.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA0wDAAAAAsAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwBEAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T21:00:51.861Z",
               "EditorCaption": ""

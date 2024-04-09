@@ -26,8 +26,7 @@ namespace ServerHost
         /// <param name="port">Открытый порт для прослушивания клиентов</param>
         public Server(int port)
         {
-            ManagerClients.Clear();
-            ManagerClients.AddRange(DataManager.LoadListClients());
+            ManagerClients = DataManager.LoadListClients();
             IPEndPoint ipPoint = new IPEndPoint(IPAddress.Any, port);
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Bind(ipPoint);   // связываем с локальной точкой ipPoint
@@ -50,19 +49,31 @@ namespace ServerHost
         }
         void ListenConnect()
         {
+            Thread WiteAuthorizationThread;
             while (true)
             {
                 var socket = ClientConnectedNow();
-                restartGetFullData:
-                var client = GetFullDataAboutClient(socket);
+                string adress = socket.RemoteEndPoint.ToString();
+                Console.WriteLine($"Новое подключение с адресса:{adress}");
+
+                WiteAuthorizationThread = new Thread(WiteAuthorization);
+                WiteAuthorizationThread.Start(socket);
+            }
+        }
+        void WiteAuthorization(object _socket)
+        {
+            while (true)
+            {
+            restartGetFullData:
+                var client = GetFullDataAboutClient(_socket as Socket);
                 if (client != null)
                 {
                     threadClientListen = new Thread(ListenClient);
                     threadClientListen.Start(client);
+                    break;
                 }
                 else
                     goto restartGetFullData;
-
             }
         }
         void ListenClient(object _client)
@@ -99,7 +110,7 @@ namespace ServerHost
             int bytes;
 
             string adress = client.RemoteEndPoint.ToString();
-            Console.WriteLine($"Новое подключение с адресса:{adress}");
+            Console.WriteLine($"Попытка авторизации с адресса:{adress}");
 
             while (true)
                 if ((bytes = new NetworkStream(client).Read(data, 0, data.Length)) != 0)
@@ -117,6 +128,9 @@ namespace ServerHost
                                 Console.WriteLine($"{adress}>Залогинился как:{itemClient.userName}, ID={itemClient.id}");
                                 return itemClient;
                             }
+
+                        Write(client, APIManager.createRequest("login", "error"));
+                        Console.WriteLine($"{adress}>Неудачная авторизация");
 
                     }
                     if (request.Split('\n')[0] == "registration")
