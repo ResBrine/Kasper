@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace ServerHost
 {
     internal class Clients
     {
-        public List<Client> clients = new List<Client>();
+        public List<Client> clients { get; set; } = new List<Client>();
         public int Count
         {
             get { return clients.Count; }
@@ -29,7 +30,7 @@ namespace ServerHost
         }
         public List<Client> GetClients()
         {
-            return this.clients;
+            return clients;
         }
         public List<Client> GetActiveClients()
         {
@@ -44,11 +45,9 @@ namespace ServerHost
         public void StopAll()
         {
             foreach (var client in GetActiveClients())
-            {
                 client.socket.Close();
-            }
         }
-        public Client CreateClient(LoginData loginData)
+        public Client CreateClient(APIManager.AutificationDataClient loginData)
         {
             Client client = new Client(Count);
             client.setUserName(loginData.userName);

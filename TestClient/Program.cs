@@ -5,8 +5,10 @@ using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
-//using System.Threading.Tasks;
+using CommonLibrary;
+
 enum StatusConnect
 {
     connected = 3,
@@ -20,6 +22,7 @@ namespace TestClient
     {
         static NetworkStream stream;
         static string userName = "";
+        static long userId = 0;
         static StatusConnect statusConnect = StatusConnect.retry;
         static void Main(string[] args)
         {
@@ -53,7 +56,7 @@ namespace TestClient
 
                     while (statusConnect != StatusConnect.disconnected && statusConnect != StatusConnect.retry)
                         while (statusConnect == StatusConnect.connected)
-                            SendString(Console.ReadLine());
+                            SendString(APIManager.CreateMessage(0,userId,userName,Console.ReadLine(),DateTime.Now));
                     
                 }
 
@@ -64,23 +67,12 @@ namespace TestClient
 
         public static void API_LOGIN(string username, string password)
         {
-            SendString(
-                 "login\n" +
-                         "{\n" +
-                         "userName=" + username + "\n" +
-                         "password=" + password + "\n" +
-                         "}"
-             );
+            SendString(JsonSerializer.Serialize(new APIManager.AutificationDataClient(false,username, password)));
         }
         public static void API_REGISTRATION(string username, string password)
         {
-            SendString(
-                 "registration\n" +
-                         "{\n" +
-                         "userName=" + username + "\n" +
-                         "password=" + password + "\n" +
-                         "}"
-             );
+            SendString(JsonSerializer.Serialize(new APIManager.AutificationDataClient(true,username, password)));
+
         }
 
         public static void SendString(string msg)
@@ -92,32 +84,40 @@ namespace TestClient
         }
         static void ReadStream()
         {
-            byte[] data = new byte[256];
+            byte[] data = new byte[1024];
             int bytes;
             while ((bytes = stream.Read(data, 0, data.Length)) != 0)
             {
                 string responseData = Encoding.ASCII.GetString(data, 0, bytes).Replace("\0","");
+                //Console.WriteLine(responseData);
                 MainThreadMethod(responseData);
             }
         }
 
         static void MainThreadMethod(string data)
         {
-            if (data.Split('\n')[0] == "registration" || data.Split('\n')[0] == "login")
-                if (data.Split('\n')[2].Substring(8).StartsWith("error"))
-                {
-                    Console.WriteLine(data.Split('\n')[2].Substring(8));
-                    statusConnect = StatusConnect.retry;
-                }
-                else
-                {
-                    Console.WriteLine("Ваш id" + data.Split('\n')[2].Substring(8+3));
-                    statusConnect = StatusConnect.connected;
+            try
+            {
+                var loginData = APIManager.GetSimplAnswer(data);
+                userId = long.Parse(loginData.value);
+                Console.WriteLine("Ваш " + loginData.value);
+                statusConnect = StatusConnect.connected;
 
-                }
-            else  
-                if (data.Split(':')[0] != userName)
-                    Console.WriteLine("\n" + data);
+            }
+            catch (Exception)
+            {
+            }
+            try
+            {
+                var message = APIManager.GetMessage(data);
+                if (message.message != null) 
+                Console.WriteLine(message.nameUser.ToString()+ ":"+ message.message);
+
+            }
+            catch (Exception e)
+            {
+
+            }
         }
     }
 }

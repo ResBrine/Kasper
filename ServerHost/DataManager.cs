@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
-
 namespace ServerHost
 {
     static class DataManager
@@ -49,24 +49,41 @@ namespace ServerHost
 
         public static Clients LoadListClients() 
         {
-            if (File.Exists(INFO.PATH_LIST_USERS))
-                using (FileStream fileStream = File.OpenRead(INFO.PATH_LIST_USERS))
-                {
-                    byte[] buffer = new byte[fileStream.Length]; //Создание буфера
-                    fileStream.Read(buffer, 0, buffer.Length); //Чтение всего файла в буфер
-                    string textFromFile = Encoding.Default.GetString(buffer); //Конвертация в String буфера
-                    Console.WriteLine("Загрузка клиентов");
-                    return new Clients(GetClients(textFromFile));
-                }
-            else
+            try
             {
-                Console.WriteLine($"Файл списка пользователей");
-                Console.WriteLine($"Создаётся новый файл списка пользователей по пути {INFO.PATH_LIST_USERS}");
-                SaveListClients(new Clients());
-                
-            }
+                if (File.Exists(INFO.PATH_LIST_USERS))
+                    using (FileStream fileStream = File.OpenRead(INFO.PATH_LIST_USERS))
+                    {
+                        byte[] buffer = new byte[fileStream.Length]; //Создание буфера
+                        fileStream.Read(buffer, 0, buffer.Length); //Чтение всего файла в буфер
+                        string textFromFile = Encoding.Default.GetString(buffer); //Конвертация в String буфера
+                        Console.WriteLine("Загрузка клиентов");
+                        Clients clients = new Clients();
+                        foreach (var item in textFromFile.Split('\n'))
+                        {
+                            if (item.Trim() != "" && item.Trim() != null)
+                            {
+                                Console.WriteLine("Расшифровка:\n" + item);
+                                clients.clients.Add(new Client(JsonSerializer.Deserialize<ClientJson>(item)));
+                            }
+                        }
+                        return clients;
+                    }
+                else
+                {
+                    Console.WriteLine($"Файл списка пользователей");
+                    Console.WriteLine($"Создаётся новый файл списка пользователей по пути {INFO.PATH_LIST_USERS}");
+                    SaveListClients(new Clients());
 
-            return null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message.ToString());
+            }
+         
+
+            return new Clients();
         }
         private static List<Client> GetClients(string data) {
 
@@ -127,22 +144,26 @@ namespace ServerHost
         }
         public static void SaveListClients(Clients clients)
         {
-            FileStream fileStream = new FileStream(INFO.PATH_LIST_USERS, FileMode.Create);
-            foreach (var client in clients.GetClients())
-                WriteLine(fileStream, 
-                    $"{client.userName}\r\n" +
-                    "{\r\n" +
-                    $"id={client.id}\r\n" +
-                    $"password={client.password}\r\n" +
-                    "}\r");
+            try
+            {
+                FileStream fileStream = new FileStream(INFO.PATH_LIST_USERS, FileMode.Create);
+                foreach (var item in clients.GetClients())
+                {
+                    WriteLine(fileStream, JsonSerializer.Serialize(item.GetClientJson()));
 
-            fileStream.Close();
+                }
+                fileStream.Close();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message.ToString());
+            }
+            
 
         }
         private static void WriteLine(FileStream fileStream, object text)
         {
-
-            byte[] input = Encoding.Default.GetBytes(text.ToString()+"\n");
+            byte[] input = Encoding.Default.GetBytes(text.ToString() + "\n");
             fileStream.Write(input, 0, input.Length);
         }
     }

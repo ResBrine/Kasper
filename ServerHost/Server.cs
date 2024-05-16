@@ -11,7 +11,8 @@ using System.Net.Http;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Policy;
-
+using CommonLibrary;
+using System.Text.Json;
 namespace ServerHost
 {
     internal class Server
@@ -89,8 +90,20 @@ namespace ServerHost
                 while ((bytes = networkStream.Read(data, 0, data.Length)) != 0)
                 {
                     string responseData = Encoding.ASCII.GetString(data, 0, bytes).Replace("\0", "");
-                    Console.WriteLine(client.userName + ":" + responseData);
-                    CallBackAll(client.userName + ":" + responseData);
+                    APIManager.Message message = null;
+                    try
+                    {
+                        message = APIManager.GetMessage(responseData);
+                    }catch(Exception e)
+                    {
+
+                    }
+                    if (message != null)
+                    {
+                        Console.WriteLine(responseData);
+                        CallBackAll(message);
+                    }
+                   
                 }
             }
             catch (IOException ex)
@@ -116,41 +129,54 @@ namespace ServerHost
                 if ((bytes = new NetworkStream(client).Read(data, 0, data.Length)) != 0)
                 {
                     string request = Encoding.ASCII.GetString(data, 0, bytes);
-
-                    if (request.Split('\n')[0] == "login")
+                    try
                     {
-                        var loginData = APIManager.getLoginData(request);
-                        foreach (var itemClient in ManagerClients.GetClients())
-                            if (itemClient.userName == loginData.userName && itemClient.password == loginData.password)
-                            {
-                                itemClient.setSocket(client);
-                                Write(itemClient.socket, APIManager.createRequest("login", $"id:{itemClient.id}"));
-                                Console.WriteLine($"{adress}>Залогинился как:{itemClient.userName}, ID={itemClient.id}");
-                                return itemClient;
-                            }
+                        var answer = APIManager.GetLoginData(request);
+                        Console.WriteLine(answer);
 
-                        Write(client, APIManager.createRequest("login", "error"));
-                        Console.WriteLine($"{adress}>Неудачная авторизация");
-
+                        if (answer.isNew)
+                        {
+                            foreach (var itemClient in ManagerClients.GetClients())
+                                if (itemClient.userName == answer.userName)
+                                  {
+                                    Write(client, APIManager.createSimpleAnswer("registration", "error:408"));
+                                    Console.WriteLine($"{adress}>Неудачная авторизация");
+                                    return null;
+                                }
+                            var newClient = ManagerClients.CreateClient(answer);
+                            Write(client, APIManager.createSimpleAnswer("registration", newClient.id.ToString()));
+                            newClient.setSocket(client);
+                            
+                            return newClient;
+                        }
+                        else
+                        {
+                            foreach (var itemClient in ManagerClients.GetClients())
+                                if (itemClient.userName == answer.userName && itemClient.password == answer.password)
+                                {
+                                    itemClient.setSocket(client);
+                                    Write(itemClient.socket, APIManager.createSimpleAnswer("login", $"{itemClient.id}"));
+                                    Console.WriteLine($"{adress}>Залогинился как:{itemClient.userName}, ID={itemClient.id}");
+                                    return itemClient;
+                                }
+                        }
                     }
-                    if (request.Split('\n')[0] == "registration")
+                    catch (Exception e)
                     {
-                        var loginData = APIManager.getLoginData(request);
-                        foreach (var itemClient in ManagerClients.GetClients())
-                            if (itemClient.userName == loginData.userName)
-                            {
-                                Write(client, APIManager.createRequest("registration", "error:408"));
-                                Console.WriteLine($"{adress}>Неудачная авторизация");
-                                return null;
-                            }
-                        var newClient = ManagerClients.CreateClient(loginData);
-                        Write(client, APIManager.createRequest("registration", $"id:{newClient.id}"));
-                        newClient.setSocket(client);
-                        return newClient;
+                        var answer = APIManager.GetLoginData(request);
+                    }
+                    try
+                    {
 
+                    }catch(Exception e)
+                    {
+                        Console.WriteLine(e.Message);
                     }
 
+                   
                     break;
+
+
                 }
 
             Console.WriteLine($"{adress}>Неудачная авторизация");
@@ -159,18 +185,18 @@ namespace ServerHost
         void Write(Socket socket, string str)
         {
             NetworkStream networkStream = new NetworkStream(socket);
-            byte[] bytes = Encoding.Unicode.GetBytes(str);
+            byte[] bytes = Encoding.Unicode.GetBytes(str+"\r\n");
             networkStream.Write(bytes, 0, bytes.Length);
             networkStream.Flush();
         }
 
 
-        void CallBackAll(string message)
+        void CallBackAll(APIManager.Message message)
         {
             foreach (var client in ManagerClients.GetActiveClients())
             {
                 NetworkStream networkStream = new NetworkStream(client.socket);
-                byte[] bytes = Encoding.Unicode.GetBytes(message);
+                byte[] bytes = Encoding.Unicode.GetBytes(APIManager.CreateMessage(message));
                 networkStream.Write(bytes, 0, bytes.Length);
                 networkStream.Flush();
             }
