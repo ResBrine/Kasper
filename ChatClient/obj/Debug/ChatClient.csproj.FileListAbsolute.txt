@@ -29,3 +29,13 @@ D:\GitHub\Kasper\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
 D:\GitHub\Kasper\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
 D:\GitHub\Kasper\ChatClient\obj\Debug\ChatClient.exe
 D:\GitHub\Kasper\ChatClient\obj\Debug\ChatClient.pdb
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\ChatPage.g.cs
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\ListChatsPage.g.cs
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\LoginPage.g.cs
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\ChatPage.baml
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\ListChatsPage.baml
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\LoginPage.baml
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\RegistrationPage.g.cs
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\RegistrationPage.baml
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\MainPage.g.cs
+D:\GitHub\Kasper\ChatClient\obj\Debug\Pages\MainPage.baml

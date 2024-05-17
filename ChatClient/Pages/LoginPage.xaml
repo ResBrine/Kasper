@@ -1,0 +1,54 @@
+﻿<Page x:Class="ChatClient.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ChatClient.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel 
+            x:Name="stackPanelMiddle"
+            Grid.Column="1"                    
+            Orientation="Vertical"
+            VerticalAlignment="Center">
+            <TextBlock 
+                Text="Имя пользователя" 
+                Margin="10,0"/>
+            <TextBox
+                x:Name="textBoxUserName"
+                FontSize="30"
+                Margin="10"/>
+            <TextBlock 
+                Text="Пароль" 
+                Margin="10,0"/>
+            <PasswordBox
+                x:Name="textBoxUserPassword"
+                FontSize="30"
+                Margin="10"/>
+            <Button
+                x:Name="buttonConfim"
+                FontSize="30"
+                Margin="10,40,10,10"
+                Padding="0,5"
+                Background="Transparent"
+                Click="buttonConfim_Click"
+                Content="Войти"/>
+            <TextBlock
+                x:Name="textBlockRegistration"
+                Text="Регистрация"
+                HorizontalAlignment="Center"
+                Margin='10'
+                Foreground="#29435c"
+                MouseDown="textBlockRegistration_MouseDown"
+                />
+        </StackPanel>
+    </Grid>
+</Page>

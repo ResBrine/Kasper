@@ -5,22 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="384" Width="785" Closing="Window_Closing">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" x:Name="textBoxName" Text="User" Margin="5" MinWidth="70" FontSize="15"/>
-        <Button Grid.Row="0" Grid.Column="1" x:Name="buttonConectDisconnect" Content="Подключиться" Width="100" Margin="5" Height="30" Click="buttonConectDisconnect_Click"/>
-        <ListView x:Name="listViewHistory" Grid.Row="1" Grid.ColumnSpan='2' Margin="5"/>
-        <TextBox Grid.Row="2" Grid.Column="0" x:Name="textBoxMessage" Text="" Margin="5" MinWidth="70" FontSize="17"/>
-        <Button Grid.Row="2" Grid.Column="1" x:Name="buttonSendMessge" Content="Отправить" IsDefault="True"  Width="100" Margin="5" Height="30" Click="buttonSendMessge_Click"/>
-
-    </Grid>
+        Title="MainWindow" Height="785" Width="785">
+    <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
 </Window>

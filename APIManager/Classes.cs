@@ -59,6 +59,9 @@ namespace CommonLibrary
             }
         }
 
+
+
+
         public static string createSimpleAnswer(string header, string value){
             return JsonSerializer.Serialize(new SimplAnswer(header, value ));
         }

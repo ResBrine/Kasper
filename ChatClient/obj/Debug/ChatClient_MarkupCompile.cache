@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitHub\Kasper\ChatClient\App.xaml
-1219584333
+6-1539878514
 
-51579654133
+11-175360724
 13-1310406943
-MainWindow.xaml;
+MainWindow.xaml;Pages\ChatPage.xaml;Pages\ListChatsPage.xaml;Pages\LoginPage.xaml;Pages\MainPage.xaml;Pages\RegistrationPage.xaml;
 
 False
 
