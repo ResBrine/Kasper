@@ -8,14 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
-    <Grid Background="#182E68">
+    <Grid MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseUp">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="2"/>
+            <ColumnDefinition x:Name="gridColumnListChats" Width="250"/>
+            <ColumnDefinition Width="3"/>
             <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions
+            >
         <Frame x:Name="frameListChats" NavigationUIVisibility="Hidden"/>
-        <Border x:Name="borderDD" Grid.Column="1" Background="Black" Opacity="0.1" Cursor="SizeWE" MouseDown="borderDD_MouseDown" />
+            
+        <Border x:Name="borderDD" Grid.Column="1" Background="Black" Opacity="0.1" Cursor="SizeWE" MouseLeftButtonDown="Grid_MouseDown" />
 
         <Frame x:Name="frameChat" Grid.Column="2" NavigationUIVisibility="Hidden"/>
     </Grid>

@@ -4,11 +4,37 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ChatClient.Pages"
+      xmlns:UserControl="clr-namespace:ChatClient.Pages.Items"
+      xmlns:svgc1="http://sharpvectors.codeplex.com/svgc/"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="250"
       Title="ListPage">
 
-    <Grid>
-        <TextBlock Text="Пока чатов нету"/>
+    <Grid Background="#EEE">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="20" Margin="2" Background="#dbdbdb">
+            <Button  Padding="7" BorderThickness="0" Background="Transparent">
+                <svgc1:SvgViewbox Source="/Drawable/ic_more.svg"/>
+            </Button>
+        </Border>
+        <Border CornerRadius="15" 
+            Margin="16" Background="#dbdbdb" Padding="10,0"
+            Grid.Column="1" Grid.Row="0" >
+            <TextBox Background="Transparent" BorderThickness="0"
+            VerticalContentAlignment="Center" FontSize="14"/>
+        </Border>
+        <ListView 
+            Name="listViewChats" 
+            Background="Transparent" 
+            Grid.ColumnSpan="2" Grid.Row="1" 
+            HorizontalContentAlignment="Stretch">
+        </ListView>
     </Grid>
 </Page>
