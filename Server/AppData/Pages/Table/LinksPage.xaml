@@ -1,0 +1,103 @@
+﻿<Page x:Class="Pages.Table.LinksPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pages.Table"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LinksPage" Loaded="Page_Loaded" >
+
+    <Border Background="White" CornerRadius="10" BorderBrush="#c42014" BorderThickness="2" Padding="5">
+        <Grid Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Center" Foreground="#1a346d" FontSize="16" FontWeight="Bold" Grid.Row="0" Text="Комната: Общага"/>
+            <Border Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" CornerRadius="5"  Margin="5" Background="Red"  Height="30" Width="30" >
+                <Button x:Name="HidBtn" Background="Transparent" BorderBrush="Transparent" Click="HidBtn_Click" />
+            </Border>
+            <ListView x:Name="listView" Grid.Row="1" Grid.RowSpan="2" HorizontalContentAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <Grid x:Name="main" Background="AliceBlue" VerticalAlignment="Center" HorizontalAlignment="Stretch" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" Height="30" Width="30" BorderBrush="#1a346d" BorderThickness="2" CornerRadius="180" Margin="5,5,10,5">
+                                <Grid>
+                                    <TextBlock Text="{Binding idUser}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding idRoom}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Foreground="#1a346d" FontWeight="Bold" FontSize="16" Grid.Column="0" Text="{Binding userName}"/>
+                                <TextBlock Grid.Row="0" Grid.RowSpan="2" Foreground="#1a346d" FontWeight="Bold" FontSize="16" Grid.Column="0" Text="{Binding roomName}"/>
+                            </Grid>
+
+                            <Button Grid.Column="3" HorizontalAlignment="Right" Name="DelBtn" VerticalAlignment="Stretch" Margin="5" Background="Transparent" BorderBrush="Transparent"  Click="DelBtn_Click">
+                                <Image Height="30" Width="30" Source="/AppData/Images/rewind-svgrepo-com.png" />
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <TextBox x:Name="textBoxSearch" Grid.Row="1" Grid.Column="1" FontSize="20" Margin="2,5" TextChanged="textBoxSearch_TextChanged"/>
+            <ListView x:Name="listViewAll" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  HorizontalContentAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <Grid x:Name="main" Background="AliceBlue" VerticalAlignment="Center" HorizontalAlignment="Stretch" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" Height="30" Width="30" BorderBrush="#1a346d" BorderThickness="2" CornerRadius="180" Margin="5,5,10,5">
+                                <Grid>
+                                    <TextBlock Text="{Binding idUser}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding idRoom}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Foreground="#1a346d" FontWeight="Bold" FontSize="16" Grid.Column="0" Text="{Binding userName}"/>
+                                <TextBlock Grid.Row="0" Grid.RowSpan="2" Foreground="#1a346d" FontWeight="Bold" FontSize="16" Grid.Column="0" Text="{Binding roomName}"/>
+                            </Grid>
+
+                            <Button Grid.Column="3" HorizontalAlignment="Right" Name="AddBtn" VerticalAlignment="Stretch" Margin="5" Background="Transparent" BorderBrush="Transparent"  Click="AddBtn_Click">
+                                <Image Height="30" Width="30" Source="/AppData/Images/reply-svgrepo-com.png" />
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Border>
+   
+</Page>

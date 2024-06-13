@@ -9,10 +9,7 @@ D:\Kasper\Kasper\ServerHost\obj\Debug\ServerHost.pdb
 D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.exe.config
 D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.exe
 D:\GitHub\Kasper\ServerHost\bin\Debug\ServerHost.pdb
-D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.AssemblyReference.cache
-D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.CoreCompileInputs.cache
-D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.exe
-D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.pdb
+D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Buffers.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Memory.dll
@@ -22,6 +19,8 @@ D:\GitHub\Kasper\ServerHost\bin\Debug\System.Text.Encodings.Web.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Text.Json.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.ValueTuple.dll
+D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.pdb
+D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.dll.config
 D:\GitHub\Kasper\ServerHost\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Buffers.xml
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Memory.xml
@@ -31,7 +30,8 @@ D:\GitHub\Kasper\ServerHost\bin\Debug\System.Text.Encodings.Web.xml
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Text.Json.xml
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Kasper\ServerHost\bin\Debug\System.ValueTuple.xml
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.AssemblyReference.cache
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.CoreCompileInputs.cache
 D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.csproj.Up2Date
-D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.dll
-D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.pdb
-D:\GitHub\Kasper\ServerHost\bin\Debug\APIManager.dll.config
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.exe
+D:\GitHub\Kasper\ServerHost\obj\Debug\ServerHost.pdb

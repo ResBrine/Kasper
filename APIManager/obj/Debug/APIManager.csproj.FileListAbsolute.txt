@@ -1,10 +1,6 @@
+D:\GitHub\Kasper\APIManager\bin\Debug\APIManager.dll.config
 D:\GitHub\Kasper\APIManager\bin\Debug\APIManager.dll
 D:\GitHub\Kasper\APIManager\bin\Debug\APIManager.pdb
-D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.csproj.AssemblyReference.cache
-D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.csproj.CoreCompileInputs.cache
-D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.dll
-D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.pdb
-D:\GitHub\Kasper\APIManager\bin\Debug\APIManager.dll.config
 D:\GitHub\Kasper\APIManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\GitHub\Kasper\APIManager\bin\Debug\System.Buffers.dll
 D:\GitHub\Kasper\APIManager\bin\Debug\System.Memory.dll
@@ -23,4 +19,8 @@ D:\GitHub\Kasper\APIManager\bin\Debug\System.Text.Encodings.Web.xml
 D:\GitHub\Kasper\APIManager\bin\Debug\System.Text.Json.xml
 D:\GitHub\Kasper\APIManager\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Kasper\APIManager\bin\Debug\System.ValueTuple.xml
+D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.csproj.AssemblyReference.cache
+D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.csproj.CoreCompileInputs.cache
 D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.csproj.Up2Date
+D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.dll
+D:\GitHub\Kasper\APIManager\obj\Debug\APIManager.pdb

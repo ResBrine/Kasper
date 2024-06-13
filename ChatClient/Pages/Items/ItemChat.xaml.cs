@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace ChatClient.Pages.Items
     /// </summary>
     public partial class ItemChat : UserControl
     {
+        public APIManager.Chat chat;
         public ImageSource avatar
         {
             get { return image.Source; }
@@ -35,16 +37,21 @@ namespace ChatClient.Pages.Items
             get { return lastMessage.Text; }
             set { lastMessage.Text = value; }
         }
+        
+        public ItemChat(APIManager.Chat chat)
+        {
+            InitializeComponent();
+            this.chat = chat;
+            userName = chat.idChat.ToString();
+            if (chat.messages != null)
+            {
+                message = chat.messages[chat.messages.Count - 1].message;
+                dataTime.Text = chat.messages[chat.messages.Count - 1].date.Hour.ToString() + ":" + chat.messages[chat.messages.Count - 1].date.Minute.ToString();
+            }
+        }
         public ItemChat()
         {
-            InitializeComponent();
-            
-        }
-        public ItemChat(string userName, string message)
-        {
-            InitializeComponent();
-            this.userName = userName;
-            this.message = message;
+            InitializeComponent();            
         }
     }
 }

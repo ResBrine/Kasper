@@ -1,0 +1,62 @@
+﻿<Page x:Class="Server.AppData.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Server.AppData.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage" >
+
+    <Grid Background="#1a346d">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="listViewMenu" Grid.Row="0" Grid.Column="0" Margin="20" Background="#030303" SelectionChanged="listViewMenu_SelectionChanged">
+            <ListViewItem HorizontalContentAlignment="Stretch" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/look-up-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Поиск</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/pie-chart-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Активность</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/insert-table-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Пользователи</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/insert-table-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Комнаты</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/printer-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Отчет</Label>
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+        <Button Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Center" Margin="0,0,20,20" Background="Transparent" BorderBrush="Transparent" Name="exitBtn" Click="exitBtn_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Height="30" Width="30" Source="/AppData/Images/back-svgrepo-com.png" Margin="5"/>
+                <Label  Foreground="White" VerticalAlignment="Center" FontSize="16" FontWeight="Bold">Выход</Label>
+            </StackPanel>            
+        </Button>
+        <Frame Background="White" Name="frameWorksapce" Grid.Column="1" Grid.RowSpan="1" NavigationUIVisibility="Hidden" Margin="0,20,20,20"/>
+        <Frame Background="Transparent" Name="frameLinks" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Margin="50,50,50,50" Visibility="Hidden"/>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KasperChatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="KasperChatEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Link" EntityType="KasperChatModel.Link" />
+    <EntitySet Name="Rooms" EntityType="KasperChatModel.Rooms" />
+    <EntitySet Name="Users" EntityType="KasperChatModel.Users" />
+    <AssociationSet Name="FK_Link_Rooms" Association="KasperChatModel.FK_Link_Rooms">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="Link" EntitySet="Link" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Link_Users" Association="KasperChatModel.FK_Link_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Link" EntitySet="Link" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="idRoom" />
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idRoom" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rooms" Relationship="KasperChatModel.FK_Link_Rooms" FromRole="Link" ToRole="Rooms" />
+    <NavigationProperty Name="Users" Relationship="KasperChatModel.FK_Link_Users" FromRole="Link" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="idRoom" />
+    </Key>
+    <Property Name="idRoom" Type="Int32" Nullable="false" />
+    <Property Name="roomName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Link" Relationship="KasperChatModel.FK_Link_Rooms" FromRole="Rooms" ToRole="Link" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Link" Relationship="KasperChatModel.FK_Link_Users" FromRole="Users" ToRole="Link" />
+  </EntityType>
+  <Association Name="FK_Link_Rooms">
+    <End Type="KasperChatModel.Rooms" Role="Rooms" Multiplicity="1" />
+    <End Type="KasperChatModel.Link" Role="Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="idRoom" />
+      </Principal>
+      <Dependent Role="Link">
+        <PropertyRef Name="idRoom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Link_Users">
+    <End Type="KasperChatModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="KasperChatModel.Link" Role="Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="Link">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

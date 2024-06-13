@@ -10,14 +10,23 @@ namespace CommonLibrary
 
     public static class APIManager
     {
+        public class Chat
+        {
+            public long idChat { get; set; }
+            public List<Message> messages { get; set; } = new List<Message> { };
+            
+            public Chat(long idChat) { 
+                this.idChat = idChat;            
+            }
+        }
+
         public class Message{
-            public bool typeMessage { get; set; } = true;
             public long idChat { get; set; }
             public long idUser { get; set; }
             public string nameUser { get; set; }
             public string message { get; set; }
-            public DateTime date { get; set; }
-            public Message(long idChat, long idUser, string nameUser , string message, DateTime date)
+            public string date { get; set; }
+            public Message(long idChat, long idUser, string nameUser , string message, string date)
             {
                 this.idChat = idChat;
                 this.idUser = idUser;
@@ -26,8 +35,18 @@ namespace CommonLibrary
                 this.date = date;
             }
         }
+        public class Room
+        {
+            public long idChat { get; set; }
+            public string nameRoom { get; set; }
+            public Room(long idChat, string nameRoom)
+            {
+                this.idChat = idChat;
+                this.nameRoom = nameRoom;
+            }
+        }
         public class AutificationDataClient{
-            public bool typeAutificationDataClient { get; set; } = true;
+            public bool autificationDataClient { get; set; } = true;
             public bool isNew { get; set; }
             public string userName { get; set; }
             public string password { get; set; }
@@ -39,17 +58,19 @@ namespace CommonLibrary
             }
         }
         public class FullDataClient{
-            public bool typeFullDataClient { get; set; } = true;
-
+            public bool fullDataClient { get; set; } = true;
+            public long idUser { get; set; }
             public string userName { get; set; }
-            public string password { get; set; }
-            public string frends { get; set; }
-            public string rooms { get; set; }
+            public List<Room> rooms { get; set; }
+            public FullDataClient(long idUser, string userName, List<Room> rooms)
+            {
+                this.idUser = idUser;
+                this.userName = userName;
+                this.rooms = rooms;
+            }
         }
         public class SimplAnswer
         {
-            public bool typeSimplAnswer { get; set; } = true;
-
             public string header { get; set; }
             public string value { get; set; }
 
@@ -62,16 +83,20 @@ namespace CommonLibrary
 
 
 
-        public static string createSimpleAnswer(string header, string value){
-            return JsonSerializer.Serialize(new SimplAnswer(header, value ));
+        public static string CreateSimpleAnswer(string header, string value){
+             return Encoding.UTF8.GetString(Encoding.Default.GetBytes(JsonSerializer.Serialize(new SimplAnswer(header, value ))));
         }
         public static string CreateMessage(Message message)
         {
-            return JsonSerializer.Serialize(message);
+             return Encoding.UTF8.GetString(Encoding.Default.GetBytes(JsonSerializer.Serialize(message)));
         }
-        public static string CreateMessage(long idChat, long idUser, string nameUser,string message, DateTime date)
+        public static string CreateMessage(long idChat, long idUser, string nameUser, string message, string date)
         {
-            return JsonSerializer.Serialize(new Message(idChat, idUser, nameUser, message, date));
+            return Encoding.UTF8.GetString(Encoding.Default.GetBytes(JsonSerializer.Serialize(new Message(idChat, idUser, nameUser, message, date))));
+        }
+        public static string CreateFullDataClient(long idUser, string userName, List<Room> rooms)
+        {
+            return Encoding.UTF8.GetString(Encoding.Default.GetBytes(JsonSerializer.Serialize(new FullDataClient(idUser, userName, rooms))));
         }
         public static Message GetMessage(string data)
         {

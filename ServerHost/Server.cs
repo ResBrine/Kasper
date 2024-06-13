@@ -35,6 +35,7 @@ namespace ServerHost
 
         public void Start()
         {
+            DataManager.SaveListClients(ManagerClients);
             socket.Listen(1000);
             threadListConnect = new Thread(new ThreadStart(ListenConnect));
             threadListConnect.Start();
@@ -89,7 +90,7 @@ namespace ServerHost
 
                 while ((bytes = networkStream.Read(data, 0, data.Length)) != 0)
                 {
-                    string responseData = Encoding.ASCII.GetString(data, 0, bytes).Replace("\0", "");
+                    string responseData = Encoding.UTF8.GetString(data, 0, bytes).Replace("\0", "");
                     APIManager.Message message = null;
                     try
                     {
@@ -119,16 +120,18 @@ namespace ServerHost
         }
         Client GetFullDataAboutClient(Socket client)
         {
+            string adress = client.RemoteEndPoint.ToString();
+            Client returnClient = null;
+            Console.WriteLine($"Попытка авторизации с адресса:{adress}");
+
+        tryAgainRead:
             byte[] data = new byte[256];
             int bytes;
-
-            string adress = client.RemoteEndPoint.ToString();
-            Console.WriteLine($"Попытка авторизации с адресса:{adress}");
 
             while (true)
                 if ((bytes = new NetworkStream(client).Read(data, 0, data.Length)) != 0)
                 {
-                    string request = Encoding.ASCII.GetString(data, 0, bytes);
+                    string request = Encoding.UTF8.GetString(data, 0, bytes);
                     try
                     {
                         var answer = APIManager.GetLoginData(request);
@@ -139,15 +142,18 @@ namespace ServerHost
                             foreach (var itemClient in ManagerClients.GetClients())
                                 if (itemClient.userName == answer.userName)
                                   {
-                                    Write(client, APIManager.createSimpleAnswer("registration", "error:408"));
+                                    Write(client, APIManager.CreateSimpleAnswer("registration", "error:408"));
                                     Console.WriteLine($"{adress}>Неудачная авторизация");
                                     return null;
                                 }
                             var newClient = ManagerClients.CreateClient(answer);
-                            Write(client, APIManager.createSimpleAnswer("registration", newClient.id.ToString()));
+                            Write(client, APIManager.CreateSimpleAnswer("registration", newClient.id.ToString()));
                             newClient.setSocket(client);
-                            
-                            return newClient;
+
+                            returnClient = newClient;
+                            Write(client, APIManager.CreateFullDataClient(returnClient.id, returnClient.userName, returnClient.rooms));
+
+                            goto tryAgainRead;
                         }
                         else
                         {
@@ -155,25 +161,36 @@ namespace ServerHost
                                 if (itemClient.userName == answer.userName && itemClient.password == answer.password)
                                 {
                                     itemClient.setSocket(client);
-                                    Write(itemClient.socket, APIManager.createSimpleAnswer("login", $"{itemClient.id}"));
+                                    Write(itemClient.socket, APIManager.CreateSimpleAnswer("login", $"{itemClient.id}"));
                                     Console.WriteLine($"{adress}>Залогинился как:{itemClient.userName}, ID={itemClient.id}");
-                                    return itemClient;
+                                    returnClient = itemClient;
+                                    Write(itemClient.socket, APIManager.CreateFullDataClient(returnClient.id, returnClient.userName, returnClient.rooms));
+                                    goto tryAgainRead;
                                 }
                         }
                     }
                     catch (Exception e)
                     {
-                        var answer = APIManager.GetLoginData(request);
+                        
+                        Console.WriteLine(e.Message);
                     }
                     try
                     {
+                        if (returnClient != null)
+                        {
 
-                    }catch(Exception e)
+                            var answer = APIManager.GetFullData(request);
+                            Console.WriteLine(answer);
+                            returnClient.rooms = answer.rooms;
+                        }
+
+                    }
+                    catch(Exception e)
                     {
                         Console.WriteLine(e.Message);
                     }
 
-                   
+
                     break;
 
 
@@ -185,7 +202,7 @@ namespace ServerHost
         void Write(Socket socket, string str)
         {
             NetworkStream networkStream = new NetworkStream(socket);
-            byte[] bytes = Encoding.Unicode.GetBytes(str+"\r\n");
+            byte[] bytes = Encoding.UTF8.GetBytes(str+"\r\n");
             networkStream.Write(bytes, 0, bytes.Length);
             networkStream.Flush();
         }
@@ -196,7 +213,7 @@ namespace ServerHost
             foreach (var client in ManagerClients.GetActiveClients())
             {
                 NetworkStream networkStream = new NetworkStream(client.socket);
-                byte[] bytes = Encoding.Unicode.GetBytes(APIManager.CreateMessage(message));
+                byte[] bytes = Encoding.UTF8.GetBytes(APIManager.CreateMessage(message));
                 networkStream.Write(bytes, 0, bytes.Length);
                 networkStream.Flush();
             }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fecaa87665a1439bbcda9eee08d9eb4a" Name="Diagram1">
+        <EntityTypeShape EntityType="KasperChatModel.Link" Width="1.5" PointX="4.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KasperChatModel.Rooms" Width="1.5" PointX="1.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KasperChatModel.Users" Width="1.5" PointX="7.125" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="KasperChatModel.FK_Link_Rooms" ManuallyRouted="false" />
+        <AssociationConnector Association="KasperChatModel.FK_Link_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

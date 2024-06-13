@@ -95,6 +95,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Items\Message.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\Items\ItemChat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,9 @@
     <Compile Include="Misc\Navigation.cs" />
     <Compile Include="Pages\ChatPage.xaml.cs">
       <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Items\Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Items\ItemChat.xaml.cs">
       <DependentUpon>ItemChat.xaml</DependentUpon>
@@ -170,6 +177,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Drawable\ic_more.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\APIManager\APIManager.csproj">
+      <Project>{9C79C0AC-C01E-4EE0-8604-F4FAEF00A55B}</Project>
+      <Name>APIManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

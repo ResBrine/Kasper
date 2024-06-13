@@ -9,10 +9,6 @@ D:\Kasper\Kasper\TestClient\obj\Debug\TestClient.pdb
 D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.exe.config
 D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.exe
 D:\GitHub\Kasper\TestClient\bin\Debug\TestClient.pdb
-D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.AssemblyReference.cache
-D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
-D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.exe
-D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.pdb
 D:\GitHub\Kasper\TestClient\bin\Debug\APIManager.dll
 D:\GitHub\Kasper\TestClient\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\GitHub\Kasper\TestClient\bin\Debug\System.Buffers.dll
@@ -34,4 +30,8 @@ D:\GitHub\Kasper\TestClient\bin\Debug\System.Text.Encodings.Web.xml
 D:\GitHub\Kasper\TestClient\bin\Debug\System.Text.Json.xml
 D:\GitHub\Kasper\TestClient\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Kasper\TestClient\bin\Debug\System.ValueTuple.xml
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.AssemblyReference.cache
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
 D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.csproj.Up2Date
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.exe
+D:\GitHub\Kasper\TestClient\obj\Debug\TestClient.pdb

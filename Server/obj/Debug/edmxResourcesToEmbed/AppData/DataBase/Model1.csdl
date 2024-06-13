@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KasperChatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="idRoom" />
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idRoom" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rooms" Relationship="Self.FK_Link_Rooms" FromRole="Link" ToRole="Rooms" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Link_Users" FromRole="Link" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="idRoom" />
+    </Key>
+    <Property Name="idRoom" Type="Int32" Nullable="false" />
+    <Property Name="roomName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Link" Relationship="Self.FK_Link_Rooms" FromRole="Rooms" ToRole="Link" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Link" Relationship="Self.FK_Link_Users" FromRole="Users" ToRole="Link" />
+  </EntityType>
+  <Association Name="FK_Link_Rooms">
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="1" />
+    <End Role="Link" Type="Self.Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="idRoom" />
+      </Principal>
+      <Dependent Role="Link">
+        <PropertyRef Name="idRoom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Link_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Link" Type="Self.Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="Link">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KasperChatEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Link" EntityType="Self.Link" />
+    <EntitySet Name="Rooms" EntityType="Self.Rooms" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Link_Rooms" Association="Self.FK_Link_Rooms">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="Link" EntitySet="Link" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Link_Users" Association="Self.FK_Link_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Link" EntitySet="Link" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

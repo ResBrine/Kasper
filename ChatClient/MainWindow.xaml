@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="785" Width="785">
+        Title="MainWindow" Height="670" Width="500" MinHeight="670" MinWidth="500"
+        >
     <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
 </Window>

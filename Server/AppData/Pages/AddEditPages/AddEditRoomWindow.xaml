@@ -1,0 +1,59 @@
+﻿<Window x:Class="Server.AppData.Pages.AddEditPages.AddEditRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Server.AppData.Pages.AddEditPages"
+        mc:Ignorable="d"
+        Title="AddEditRoomWindow" MinHeight="200" MaxHeight="200" MinWidth="400" MaxWidth="400" Height="200" Width="400">
+    <Grid Background="#1a346d">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBlock Foreground="White" Text="ID" Margin="5"/>
+            <TextBox Text="{Binding idRoom}" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBlock Foreground="White" Text="Имя" Margin="5"/>
+            <TextBox Text="{Binding roomName}" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Button x:Name="BackBtn" Background="#356adf" Margin="25,5" Height="30" Width="150" Click="BackBtn_Click" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+BorderBrush="Transparent"
+BorderThickness="{TemplateBinding BorderThickness}"
+CornerRadius="10"
+Padding="{TemplateBinding Padding}">
+                            <TextBlock HorizontalAlignment="Center" Foreground="White"
+  VerticalAlignment="Center" FontSize="15">Отмена</TextBlock>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="SaveBtn" Background="#356adf" Margin="25,5" Height="30" Width="150" Click="SaveBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                BorderBrush="Transparent"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="10"
+                Padding="{TemplateBinding Padding}">
+                            <TextBlock HorizontalAlignment="Center" Foreground="White"
+                  VerticalAlignment="Center" FontSize="15">Сохранить</TextBlock>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+        </StackPanel>
+    </Grid>
+</Window>

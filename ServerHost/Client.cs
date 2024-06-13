@@ -13,7 +13,7 @@ namespace ServerHost
         public Socket socket;
         public string userName;
         public string password;
-        public List<int> friends = new List<int>();
+        public List<int> rooms = new List<int>();
 
 
         public string ip;
@@ -21,19 +21,22 @@ namespace ServerHost
 
         public ClientJson GetClientJson()
         {
-            return new ClientJson(id, userName, password, friends);
+            return new ClientJson(id, userName, password, rooms);
         }
 
-        public Client(int id)
+        public Client(int id, string userName, string password, List<int> rooms)
         {
             this.id = id;
+            this.userName = userName;
+            this.password = password;
+            this.rooms = rooms;
         }
         public Client(ClientJson clientJson)
         {
             id = clientJson.id;
             userName = clientJson.userName;
             password = clientJson.password;
-            friends = clientJson.friends;
+            rooms = clientJson.rooms;
         }
         public void setUserName(string userName)
         {
@@ -47,14 +50,6 @@ namespace ServerHost
         {
             this.password = password;
         }
-        public void addFrend(int idFrend)
-        {
-            friends.Add(idFrend);
-        }
-        public void removeFrend(int idFrend)
-        {
-            friends.Remove(idFrend);
-        }
     }
 
     class ClientJson
@@ -62,14 +57,14 @@ namespace ServerHost
         public int id {  get; set; }
         public string userName { get; set; }
         public string password { get; set; }
-        public List<int> friends { get; set; }
+        public List<int> rooms { get; set; } = new List<int>();
 
-        public ClientJson(int id, string userName, string password, List<int> friends)
+        public ClientJson(int id, string userName, string password, List<int> rooms)
         {
             this.id=id;
             this.userName=userName;
             this.password=password;
-            this.friends = friends;
+            this.rooms = rooms;
         }
     }
 }

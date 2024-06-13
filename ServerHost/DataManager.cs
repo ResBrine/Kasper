@@ -18,7 +18,7 @@ namespace ServerHost
                 {
                     byte[] buffer = new byte[fileStream.Length]; //Создание буфера
                     fileStream.Read(buffer, 0, buffer.Length); //Чтение всего файла в буфер
-                    string textFromFile = Encoding.Default.GetString(buffer); //Конвертация в String буфера
+                    string textFromFile = Encoding.UTF8.GetString(buffer); //Конвертация в String буфера
                     Console.WriteLine("Настройка сервера:");
                     foreach (string line in textFromFile.Split('\n')) //Построчное перебирание файла
                     {
@@ -56,7 +56,7 @@ namespace ServerHost
                     {
                         byte[] buffer = new byte[fileStream.Length]; //Создание буфера
                         fileStream.Read(buffer, 0, buffer.Length); //Чтение всего файла в буфер
-                        string textFromFile = Encoding.Default.GetString(buffer); //Конвертация в String буфера
+                        string textFromFile = Encoding.UTF8.GetString(buffer); //Конвертация в String буфера
                         Console.WriteLine("Загрузка клиентов");
                         Clients clients = new Clients();
                         foreach (var item in textFromFile.Split('\n'))
@@ -64,9 +64,11 @@ namespace ServerHost
                             if (item.Trim() != "" && item.Trim() != null)
                             {
                                 Console.WriteLine("Расшифровка:\n" + item);
-                                clients.clients.Add(new Client(JsonSerializer.Deserialize<ClientJson>(item)));
+                                clients.clients.Add(new Client(JsonSerializer.Deserialize<ClientJson>(Encoding.UTF8.GetString(Encoding.Default.GetBytes(item)))));
                             }
                         }
+                      // clients.clients.Add(new Client(3,"Маша","123",new List<int> { 0,1,2}));
+
                         return clients;
                     }
                 else
@@ -85,63 +87,6 @@ namespace ServerHost
 
             return new Clients();
         }
-        private static List<Client> GetClients(string data) {
-
-            List<Client> clients = new List<Client>();
-            string stringClient = "";
-            int maxLine = data.Split('\n').Length;
-
-            for (int countLines = 0; countLines
-                < maxLine; countLines++)
-            {
-                string lastLine = "";
-
-                if (countLines!=0)
-                    lastLine = data.Split('\n')[countLines - 1];
-
-                string line = data.Split('\n')[countLines];
-
-                if (line == "{\r")
-                    stringClient = lastLine;
-                
-                stringClient += line;
-
-                if (line == "}\r" || line == "}")
-                    clients.Add(GetClient(stringClient));
-                
-                if (countLines == maxLine)
-                    break;
-            }
-
-            return clients;
-        }
-
-        private static Client GetClient(string data)
-        {
-            
-            string userName = "";
-            string password = "";
-            int id = 0;
-
-            for (int countLines = 0; countLines
-                < data.Split('\r').Length; countLines++)
-            {
-                string line = data.Split('\r')[countLines];
-
-                if (countLines == 0)
-                    userName = line;
-                if (line.StartsWith("id="))
-                    id = int.Parse(line.Substring(3));
-                if (line.StartsWith("password="))
-                    password = line.Substring(9);
-            }
-
-            Client client = new Client(id);
-            client.setUserName(userName);
-            client.setPassword(password);
-
-            return client;
-        }
         public static void SaveListClients(Clients clients)
         {
             try
@@ -149,7 +94,7 @@ namespace ServerHost
                 FileStream fileStream = new FileStream(INFO.PATH_LIST_USERS, FileMode.Create);
                 foreach (var item in clients.GetClients())
                 {
-                    WriteLine(fileStream, JsonSerializer.Serialize(item.GetClientJson()));
+                    WriteLine(fileStream,  Encoding.UTF8.GetString(Encoding.Default.GetBytes(JsonSerializer.Serialize(item.GetClientJson()))));
 
                 }
                 fileStream.Close();
@@ -163,7 +108,7 @@ namespace ServerHost
         }
         private static void WriteLine(FileStream fileStream, object text)
         {
-            byte[] input = Encoding.Default.GetBytes(text.ToString() + "\n");
+            byte[] input = Encoding.UTF8.GetBytes(text.ToString() + "\n");
             fileStream.Write(input, 0, input.Length);
         }
     }

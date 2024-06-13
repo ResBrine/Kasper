@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
-    <Grid MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseUp">
+    <Grid MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseUp" MouseLeave="Grid_MouseLeave" SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="gridColumnListChats" Width="250"/>
             <ColumnDefinition Width="3"/>
@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions
             >
         <Frame x:Name="frameListChats" NavigationUIVisibility="Hidden"/>
-            
+
         <Border x:Name="borderDD" Grid.Column="1" Background="Black" Opacity="0.1" Cursor="SizeWE" MouseLeftButtonDown="Grid_MouseDown" />
 
         <Frame x:Name="frameChat" Grid.Column="2" NavigationUIVisibility="Hidden"/>

@@ -3,60 +3,59 @@
   "WorkspaceRootPath": "D:\\GitHub\\Kasper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|d:\\github\\kasper\\chatclient\\pages\\chatpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\chatpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|d:\\github\\kasper\\chatclient\\pages\\listchatspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\listchatspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\pages\\listchatspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\listchatspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\searchpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\searchpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|d:\\github\\kasper\\chatclient\\pages\\items\\itemchat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\items\\itemchat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\roomspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\roomspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|d:\\github\\kasper\\chatclient\\pages\\items\\itemchat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\items\\itemchat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\addeditpages\\addedituserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\addeditpages\\addedituserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\linkspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\linkspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|d:\\github\\kasper\\chatclient\\drawable\\ic_person.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\drawable\\ic_person.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\addeditpages\\addeditroomwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\addeditpages\\addeditroomwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\pages\\registrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\pages\\registrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\misc\\navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\misc\\navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\roomspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\roomspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\table\\linkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\table\\linkspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaspe\\AppData\\Local\\Temp\\.vsdbgsrc\\5bd1382993348c832e1a36c46eef8a3066055294d59d9915c9d91b46481b75d6\\FrameworkTemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|D:\\GitHub\\Kasper\\chatclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B66B739-61E8-43C1-B98A-096E1C3B6AF0}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|d:\\github\\kasper\\server\\appdata\\pages\\addeditpages\\addeditroomwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EC8C6927-861E-4C49-AE5D-C85BA58981E1}|Server\\Server.csproj|solutionrelative:server\\appdata\\pages\\addeditpages\\addeditroomwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,200 +64,181 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 60,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 61,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ItemChat.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\Items\\ItemChat.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\Items\\ItemChat.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\Items\\ItemChat.xaml.cs",
-              "RelativeToolTip": "ChatClient\\Pages\\Items\\ItemChat.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwC4AAAAjAAAA",
+              "DocumentIndex": 2,
+              "Title": "SearchPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\SearchPage.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\SearchPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\SearchPage.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\SearchPage.xaml.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAUwIMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T16:11:07.875Z",
+              "WhenOpened": "2024-06-13T16:12:05.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChatPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ChatPage.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\ChatPage.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ChatPage.xaml",
-              "RelativeToolTip": "ChatClient\\Pages\\ChatPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T15:46:12.741Z",
+              "DocumentIndex": 5,
+              "Title": "AddEditUserWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\AddEditPages\\AddEditUserWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditUserWindow.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\AddEditPages\\AddEditUserWindow.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAcwCwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:09:19.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ic_person.svg",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Drawable\\ic_person.svg",
-              "RelativeDocumentMoniker": "ChatClient\\Drawable\\ic_person.svg",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Drawable\\ic_person.svg",
-              "RelativeToolTip": "ChatClient\\Drawable\\ic_person.svg",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPjVNLSFRRGP7unTsz9w75uOaMZlMNpo1aFFJRodRGN7UwatMiKgga3JgVRBSNSA8RooUFLRycCCpc9ITIFi0EW\u002BhCW/gONYUcxplsQL13nKv3dM6ZGV\u002BE9N37c\u002B455/\u002B\u002B/7s/5whYA7/fP5L63BSCIDxvbGxsAiEktZQEE6Brm6K1tXWS5TU0NNQyjsiZKQgCBgBChQ2Q\u002BfswpytgDLmg9zihD9XBNJfhcrlstPoeqlVPRS6uCBDy1broLnN29PkxPeaFFmpC79gOdEu9sB8KQRt\u002Bz/NUVbUGAoGpJIfc5j2gZIuv3fam/sCNGrdjGLGwE23hR\u002BiMeBCKAbXlOTgfr0VW9QfqD4iEZ5BIJNAWDI5yB75X0tXqwrc1JZk90MKVUEq/4UplFc4W5UKwiHjaO4tx90NWiYfT5cQuj4dRITLrZfn9104XtOD3\u002BE4z7/BrqIoKZ4YM37E8XNifA4vdiuCIApPzWY9Wmy9h6UfOpd13t89FstEceyF2PJlAfNHkm6y6xSbxcTASpyuMyFT4NoeI6PV6mzEvvIy0oO\u002BXPVGULaMs186jVLVil0zzF\u002BI4ki\u002BnqjP\u002BGgemrp0Z\u002BHn8T0d0nyrOTky\u002B8x0tNoxE0iZrcSqXz5lAcroCcXkeBcGpyzcnowRTDk9xoDuEmbkE5vRlfB6cRcWzIXibv\u002BNTf5ST0y7SEBa6MGIaOFje2VUnZSgPTFECMZM9YCeLde6cdwvuVLlXrVMFWXGAHqRRaUlDezyEic6tlbFBbW/oS8nHbf0RDZIooDDLipPeTJwozIJJH4EIoG/y1/6Fe/5bj6lFousa0WjoWjoWiLYhGNidWHcXDNhOsVGWFSg0ZCUdDigbIo11Zv73Oq8C\u002BAsr5V2IWWNA0gAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-05-17T15:33:42.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "ChatClient\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAwwD0AAABFAAAA",
+              "Title": "AddEditRoomWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T15:15:26.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\MainPage.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "ChatClient\\Pages\\MainPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T15:15:24.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListChatsPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ListChatsPage.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\ListChatsPage.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ListChatsPage.xaml",
-              "RelativeToolTip": "ChatClient\\Pages\\ListChatsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T10:13:00.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListChatsPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ListChatsPage.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\ListChatsPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\ListChatsPage.xaml.cs",
-              "RelativeToolTip": "ChatClient\\Pages\\ListChatsPage.xaml.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAowB0AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T10:12:58.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Navigation.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Misc\\Navigation.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Misc\\Navigation.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Misc\\Navigation.cs",
-              "RelativeToolTip": "ChatClient\\Misc\\Navigation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T10:17:01.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RegistrationPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\RegistrationPage.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\RegistrationPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\RegistrationPage.xaml.cs",
-              "RelativeToolTip": "ChatClient\\Pages\\RegistrationPage.xaml.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAADgvyMAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T10:06:14.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\App.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\App.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\App.xaml",
-              "RelativeToolTip": "ChatClient\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T10:01:09.383Z",
+              "WhenOpened": "2024-06-13T16:08:52.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\LoginPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\LoginPage.xaml.cs",
-              "RelativeToolTip": "ChatClient\\Pages\\LoginPage.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAAAAAA",
+              "Title": "RoomsPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\RoomsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\RoomsPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\RoomsPage.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\RoomsPage.xaml.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAiwFcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:56:31.162Z",
+              "WhenOpened": "2024-06-13T15:28:23.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\MainWindow.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\MainWindow.xaml",
-              "RelativeToolTip": "ChatClient\\MainWindow.xaml",
+              "DocumentIndex": 9,
+              "Title": "UsersPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\UsersPage.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\UsersPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\UsersPage.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\UsersPage.xaml.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAvwFUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T15:28:32.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\SearchPage.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\SearchPage.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\SearchPage.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\SearchPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T09:43:14.653Z"
+              "WhenOpened": "2024-06-13T16:11:43.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\MainPage.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\MainPage.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T17:16:45.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\MainPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\MainPage.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\MainPage.xaml.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAkwDcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:16:47.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LinksPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\LinksPage.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\LinksPage.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\LinksPage.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\LinksPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T18:03:40.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\UsersPage.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\UsersPage.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\UsersPage.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\UsersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T16:11:55.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RoomsPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\RoomsPage.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\RoomsPage.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\RoomsPage.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\RoomsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T17:18:02.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FrameworkTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\kaspe\\AppData\\Local\\Temp\\.vsdbgsrc\\5bd1382993348c832e1a36c46eef8a3066055294d59d9915c9d91b46481b75d6\\FrameworkTemplate.cs",
+              "ToolTip": "C:\\Users\\kaspe\\AppData\\Local\\Temp\\.vsdbgsrc\\5bd1382993348c832e1a36c46eef8a3066055294d59d9915c9d91b46481b75d6\\FrameworkTemplate.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AQIAAE0DAAAAAAAAAAAuwGEDAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T18:00:11.51Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LinksPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\LinksPage.xaml.cs",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\Table\\LinksPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\Table\\LinksPage.xaml.cs",
+              "RelativeToolTip": "Server\\AppData\\Pages\\Table\\LinksPage.xaml.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAIwFoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T18:03:15.468Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ChatClient\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ChatClient\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAwCMAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:42:03.098Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "60eb439d-6067-4b06-af36-194e7878ba99",
-        "Display": 1,
-        "X": -5,
-        "Y": 283,
-        "Width": 1407,
-        "Height": 737,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemChat.xaml",
-              "DocumentMoniker": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\Items\\ItemChat.xaml",
-              "RelativeDocumentMoniker": "ChatClient\\Pages\\Items\\ItemChat.xaml",
-              "ToolTip": "D:\\GitHub\\Kasper\\ChatClient\\Pages\\Items\\ItemChat.xaml",
-              "RelativeToolTip": "ChatClient\\Pages\\Items\\ItemChat.xaml",
+              "Title": "AddEditRoomWindow.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml",
+              "RelativeDocumentMoniker": "Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml",
+              "ToolTip": "D:\\GitHub\\Kasper\\Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml",
+              "RelativeToolTip": "Server\\AppData\\Pages\\AddEditPages\\AddEditRoomWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T12:28:22.805Z",
+              "WhenOpened": "2024-06-13T16:08:47.363Z",
               "EditorCaption": ""
             }
           ]

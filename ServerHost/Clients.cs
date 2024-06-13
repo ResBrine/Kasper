@@ -49,9 +49,7 @@ namespace ServerHost
         }
         public Client CreateClient(APIManager.AutificationDataClient loginData)
         {
-            Client client = new Client(Count);
-            client.setUserName(loginData.userName);
-            client.setPassword(loginData.password);
+            Client client = new Client(Count, loginData.userName, loginData.password, new List<int>());
             clients.Add(client);
             DataManager.SaveListClients(this);
             return client;
