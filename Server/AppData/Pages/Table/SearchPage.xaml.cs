@@ -17,6 +17,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+enum RoomOrUser
+{
+    together,
+    room,
+    user
+}
+
 namespace Pages.Table
 {
     /// <summary>
@@ -25,6 +32,7 @@ namespace Pages.Table
     public partial class SearchPage : Page
     {
         public static SearchPage Instance { get; private set; }
+        private RoomOrUser typeFilter = RoomOrUser.together;
         public SearchPage()
         {
             InitializeComponent();
@@ -33,12 +41,14 @@ namespace Pages.Table
         private void UpduteList(string search = "")
         {
             List<RoomAndUser> list = new List<RoomAndUser>();
-            foreach (var item in Connect.GetListRooms)
-                if (item.roomName.ToLower().Contains(search.ToLower()))
-                    list.Add(new RoomAndUser(item));
-            foreach (var item in Connect.GetListUsers)
-                if (item.userName.ToLower().Contains(search.ToLower()))
-                list.Add(new RoomAndUser(item));
+            if (typeFilter == RoomOrUser.together || typeFilter == RoomOrUser.room)
+                foreach (var item in Connect.GetListRooms)
+                    if (item.roomName.ToLower().Contains(search.ToLower()))
+                        list.Add(new RoomAndUser(item));
+            if (typeFilter == RoomOrUser.together || typeFilter == RoomOrUser.user)
+                foreach (var item in Connect.GetListUsers)
+                    if (item.userName.ToLower().Contains(search.ToLower()))
+                        list.Add(new RoomAndUser(item));
             listView.ItemsSource = list;
         }
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -55,7 +65,7 @@ namespace Pages.Table
                 addEditRoomWindow.ShowDialog();
 
             }
-           
+
         }
 
         private void DelBtn_Click(object sender, RoutedEventArgs e)
@@ -66,10 +76,10 @@ namespace Pages.Table
                 if (MessageBox.Show($"Удалить {roomAndUser.UserName}", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     var listLink = Connect.GetLinks;
-                        foreach (var link in listLink)
-                            if (link.idUser == roomAndUser.IdUser)
-                                Connect.GetLinks.Remove(link);
-                        Connect.GetUsers.Remove(roomAndUser.User);
+                    foreach (var link in listLink)
+                        if (link.idUser == roomAndUser.IdUser)
+                            Connect.GetLinks.Remove(link);
+                    Connect.GetUsers.Remove(roomAndUser.User);
                 }
             }
             else
@@ -84,7 +94,7 @@ namespace Pages.Table
                 }
 
             }
-            
+
             try
             {
                 Connect.Context.SaveChanges();
@@ -124,7 +134,8 @@ namespace Pages.Table
 
         class RoomAndUser
         {
-            public Users User {
+            public Users User
+            {
                 get
                 {
                     foreach (var item in Connect.GetUsers)
@@ -169,6 +180,24 @@ namespace Pages.Table
 
         private void Page_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
+            UpduteList(editTextSearch.Text.ToLower());
+        }
+
+        private void userBtn_Click(object sender, RoutedEventArgs e)
+        {
+            typeFilter = RoomOrUser.user;
+            UpduteList(editTextSearch.Text.ToLower());
+        }
+
+        private void roomBtn_Click(object sender, RoutedEventArgs e)
+        {
+            typeFilter = RoomOrUser.room;
+            UpduteList(editTextSearch.Text.ToLower());
+        }
+
+        private void allBtn_Click(object sender, RoutedEventArgs e)
+        {
+            typeFilter = RoomOrUser.together;
             UpduteList(editTextSearch.Text.ToLower());
         }
     }

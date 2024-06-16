@@ -10,6 +10,8 @@
         <EntityTypeShape EntityType="KasperChatModel.Users" Width="1.5" PointX="7.125" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="KasperChatModel.FK_Link_Rooms" ManuallyRouted="false" />
         <AssociationConnector Association="KasperChatModel.FK_Link_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KasperChatModel.Ratings" Width="1.5" PointX="9.75" PointY="2.375" />
+        <AssociationConnector Association="KasperChatModel.FK_Users_Ratings" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

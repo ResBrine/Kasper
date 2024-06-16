@@ -21,9 +21,20 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="KasperChatModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="countMessage" ColumnName="countMessage" />
           <ScalarProperty Name="idUser" ColumnName="idUser" />
           <ScalarProperty Name="userName" ColumnName="userName" />
           <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ratings">
+      <EntityTypeMapping TypeName="KasperChatModel.Ratings">
+        <MappingFragment StoreEntitySet="Ratings">
+          <ScalarProperty Name="limit" ColumnName="limit" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="idRating" ColumnName="idRating" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

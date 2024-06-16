@@ -27,6 +27,9 @@
     <Property Name="userName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Link" Relationship="Self.FK_Link_Users" FromRole="Users" ToRole="Link" />
+    <Property Name="countMessage" Type="Int32" Nullable="false" />
+    <Property Name="rating" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ratings" Relationship="KasperChatModel.FK_Users_Ratings" FromRole="Users" ToRole="Ratings" />
   </EntityType>
   <Association Name="FK_Link_Rooms">
     <End Role="Rooms" Type="Self.Rooms" Multiplicity="1" />
@@ -64,5 +67,31 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Link" EntitySet="Link" />
     </AssociationSet>
+    <EntitySet Name="Ratings" EntityType="KasperChatModel.Ratings" />
+    <AssociationSet Name="FK_Users_Ratings" Association="KasperChatModel.FK_Users_Ratings">
+      <End Role="Ratings" EntitySet="Ratings" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Ratings">
+    <Key>
+      <PropertyRef Name="idRating" />
+    </Key>
+    <Property Name="idRating" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="limit" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="KasperChatModel.FK_Users_Ratings" FromRole="Ratings" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Users_Ratings">
+    <End Type="KasperChatModel.Ratings" Role="Ratings" Multiplicity="1" />
+    <End Type="KasperChatModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ratings">
+        <PropertyRef Name="idRating" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="rating" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

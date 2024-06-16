@@ -82,33 +82,14 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-            <Button x:Name="AddBtn" Background="#356adf" Margin="5" Height="30" Width="150" >
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                            BorderBrush="Transparent"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="10"
-                            Padding="{TemplateBinding Padding}">
-                            <TextBlock HorizontalAlignment="Center" Foreground="White"
-                              VerticalAlignment="Center" FontSize="15">Добавить</TextBlock>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
+            <Button Margin="5" x:Name="allBtn" Height="50" Width="50" Background="Transparent"  Click="allBtn_Click" BorderThickness="0">
+                <Image Source="/AppData/Images/link-svgrepo-com.png"/>
             </Button>
-            <Button x:Name="DelBtn" Background="#356adf" Margin="5" Height="30" Width="150"  >
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                         BorderBrush="Transparent"
-                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="10"
-                        Padding="{TemplateBinding Padding}">
-                            <TextBlock HorizontalAlignment="Center" Foreground="White"
-                         VerticalAlignment="Center" FontSize="15">Удалить</TextBlock>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
+            <Button Margin="5" x:Name="roomBtn" Height="50" Width="50" Background="Transparent"  Click="roomBtn_Click" BorderThickness="0">
+                <Image Source="/AppData/Images/front-page-svgrepo-com.png"/>
+            </Button>
+            <Button Margin="5" x:Name="userBtn" Height="50" Width="50" Background="Transparent" Click="userBtn_Click" BorderThickness="0">
+                <Image Source="/AppData/Images/personal-svgrepo-com.png"/>
             </Button>
         </StackPanel>
     </Grid>

@@ -38,8 +38,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Row="0" Foreground="#1a346d" FontWeight="Bold" FontSize="16" Grid.Column="0" Text="{Binding userName}"/>
-                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Пароль: " HorizontalAlignment="Right"/>
-                            <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding password}"/>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" Text="{Binding Ratings.name}"/>
                         </Grid>
                         <Button Grid.Column="2" HorizontalAlignment="Right" Name="EditBtn" VerticalAlignment="Stretch" Margin="5" Background="Transparent" BorderBrush="Transparent"  Click="EditBtn_Click">
                             <Image Height="30" Width="30" Source="/AppData/Images/settings-svgrepo-com.png" />

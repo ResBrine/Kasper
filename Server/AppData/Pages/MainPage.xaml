@@ -17,7 +17,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <ListView x:Name="listViewMenu" Grid.Row="0" Grid.Column="0" Margin="20" Background="#030303" SelectionChanged="listViewMenu_SelectionChanged">
+        <ListView x:Name="listViewMenu" Grid.Row="0" Grid.Column="0" Margin="20" Background="#030303" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" SelectionChanged="listViewMenu_SelectionChanged">
             <ListViewItem HorizontalContentAlignment="Stretch" >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <Image Height="30" Width="30" Source="/AppData/Images/look-up-svgrepo-com.png" Margin="5"/>
@@ -42,10 +42,22 @@
                     <Label  Foreground="White" VerticalAlignment="Center">Комнаты</Label>
                 </StackPanel>
             </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/insert-table-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Рейтинги</Label>
+                </StackPanel>
+            </ListViewItem>
             <ListViewItem HorizontalContentAlignment="Stretch">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <Image Height="30" Width="30" Source="/AppData/Images/printer-svgrepo-com.png" Margin="5"/>
                     <Label  Foreground="White" VerticalAlignment="Center">Отчет</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="30" Width="30" Source="/AppData/Images/document-lock-svgrepo-com.png" Margin="5"/>
+                    <Label  Foreground="White" VerticalAlignment="Center">Бэкап</Label>
                 </StackPanel>
             </ListViewItem>
         </ListView>

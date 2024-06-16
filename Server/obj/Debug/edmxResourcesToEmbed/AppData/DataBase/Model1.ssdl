@@ -9,6 +9,14 @@
     <Property Name="idUser" Type="int" Nullable="false" />
     <Property Name="role" Type="nvarchar" MaxLength="25" />
   </EntityType>
+  <EntityType Name="Ratings">
+    <Key>
+      <PropertyRef Name="idRating" />
+    </Key>
+    <Property Name="idRating" Type="int" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="25" Nullable="false" />
+    <Property Name="limit" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="Rooms">
     <Key>
       <PropertyRef Name="idRoom" />
@@ -23,6 +31,8 @@
     <Property Name="idUser" Type="int" Nullable="false" />
     <Property Name="userName" Type="nvarchar" MaxLength="25" />
     <Property Name="password" Type="nvarchar" MaxLength="25" />
+    <Property Name="countMessage" Type="int" Nullable="false" />
+    <Property Name="rating" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Link_Rooms">
     <End Role="Rooms" Type="Self.Rooms" Multiplicity="1" />
@@ -48,8 +58,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Users_Ratings">
+    <End Role="Ratings" Type="Self.Ratings" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ratings">
+        <PropertyRef Name="idRating" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="rating" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище KasperChatModelContainer">
     <EntitySet Name="Link" EntityType="Self.Link" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ratings" EntityType="Self.Ratings" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Link_Rooms" Association="Self.FK_Link_Rooms">
@@ -59,6 +82,10 @@
     <AssociationSet Name="FK_Link_Users" Association="Self.FK_Link_Users">
       <End Role="Users" EntitySet="Users" />
       <End Role="Link" EntitySet="Link" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Ratings" Association="Self.FK_Users_Ratings">
+      <End Role="Ratings" EntitySet="Ratings" />
+      <End Role="Users" EntitySet="Users" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

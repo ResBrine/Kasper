@@ -22,7 +22,10 @@ namespace Server.AppData.DataBase
         public int idUser { get; set; }
         public string userName { get; set; }
         public string password { get; set; }
+        public int countMessage { get; set; }
+        public int rating { get; set; }
     
         public virtual ICollection<Link> Link { get; set; }
+        public virtual Ratings Ratings { get; set; }
     }
 }

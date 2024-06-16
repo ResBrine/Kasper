@@ -40,7 +40,7 @@ namespace Pages.Table
     /// <summary>
     /// ReportPahe
     /// </summary>
-    public partial class ReportPahe : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector
+    public partial class ReportPage : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector
     {
 
         private bool _contentLoaded;

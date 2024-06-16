@@ -20,12 +20,9 @@ namespace Server.AppData.DataBase
     
         public virtual Rooms Rooms { get; set; }
         public virtual Users Users { get; set; }
-        public Link()
-        {
-            
-        }
-        public Link(int idRoom, int idUser, string role) 
-        {
+
+        public Link() { }
+        public Link(int idRoom, int idUser, string role) {
             this.idRoom = idRoom;
             this.idUser = idUser;
             this.role = role;

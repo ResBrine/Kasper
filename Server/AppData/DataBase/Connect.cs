@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Server.AppData.DataBase
 {
@@ -16,6 +13,28 @@ namespace Server.AppData.DataBase
                 if (c == null)
                     c = new KasperChatEntities();
                 return c;
+            }
+        }
+        public static void IncrementMessageCount(int userId)
+        {
+            var user = Context.Users.Find(userId);
+            if (user != null)
+            {
+                user.countMessage++;
+                foreach (var rating in GetRatings)
+                    if (user.countMessage > rating.limit)
+                        if (rating.idRating + 1 == GetRatings.Count())
+                            user.rating = rating.idRating;
+                        else
+                            user.rating = rating.idRating + 1; 
+                Context.SaveChanges();
+            }
+        }
+        public static System.Data.Entity.DbSet<Ratings> GetRatings
+        {
+            get
+            {
+                return Context.Ratings;
             }
         }
         public static System.Data.Entity.DbSet<Link> GetLinks

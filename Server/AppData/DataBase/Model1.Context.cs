@@ -28,5 +28,6 @@ namespace Server.AppData.DataBase
         public DbSet<Link> Link { get; set; }
         public DbSet<Rooms> Rooms { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Ratings> Ratings { get; set; }
     }
 }

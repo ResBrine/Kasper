@@ -9,6 +9,7 @@ using System.Threading;
 using CommonLibrary;
 using System.IO;
 using Server.AppData.DataBase;
+using System.Runtime.Remoting.Contexts;
 
 namespace Server.AppData.Server
 {
@@ -104,7 +105,10 @@ namespace Server.AppData.Server
                     string responseData = Encoding.UTF8.GetString(data, 0, bytes).Replace("\0", "");
                     var message = APIManager.GetMessage(responseData);
                     if (message != null)
+                    {
+                        Connect.IncrementMessageCount((int)message.idUser);
                         CallBackAll(message);
+                    }
                 }
             }
             catch (IOException ex)

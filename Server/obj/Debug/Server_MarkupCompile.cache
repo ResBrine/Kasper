@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitHub\Kasper\Server\App.xaml
-8491560109
+12-853918506
 2508055541
-221700322011
-272039910467
-AppData\Pages\AddEditPages\AddEditRoomWindow.xaml;AppData\Pages\AddEditPages\AddEditUserWindow.xaml;AppData\Pages\MainPage.xaml;AppData\Pages\Table\LinksPage.xaml;AppData\Pages\Table\RoomsPage.xaml;AppData\Pages\Table\SearchPage.xaml;AppData\Pages\Table\UsersPage.xaml;MainWindow.xaml;
+2728053726
+31875891184
+AppData\Pages\AddEditPages\AddEditRatingWindow.xaml;AppData\Pages\AddEditPages\AddEditRoomWindow.xaml;AppData\Pages\AddEditPages\AddEditUserWindow.xaml;AppData\Pages\MainPage.xaml;AppData\Pages\Table\ActivityPage.xaml;AppData\Pages\Table\LinksPage.xaml;AppData\Pages\Table\RatingsPage.xaml;AppData\Pages\Table\ReportPage.xaml;AppData\Pages\Table\RoomsPage.xaml;AppData\Pages\Table\SearchPage.xaml;AppData\Pages\Table\UsersPage.xaml;MainWindow.xaml;
 
 False
 

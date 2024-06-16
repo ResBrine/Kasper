@@ -155,10 +155,5 @@ namespace Pages.Table
         {
             UpduteListAdd(textBoxSearch.Text.ToLower());
         }
-
-        private void Page_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
     }
 }

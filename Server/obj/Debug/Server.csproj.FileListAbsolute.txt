@@ -69,3 +69,12 @@ D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\AddEditPages\AddEditUserWindow.g
 D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\AddEditPages\AddEditUserWindow.baml
 D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\SearchPage.g.cs
 D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\SearchPage.baml
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\ReportPage.g.cs
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\ReportPage.baml
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\ActivityPage.g.cs
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\ActivityPage.baml
+D:\GitHub\Kasper\Server\obj\Debug\Server.csproj.ResolveComReference.cache
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\AddEditPages\AddEditRatingWindow.g.cs
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\RatingsPage.g.cs
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\AddEditPages\AddEditRatingWindow.baml
+D:\GitHub\Kasper\Server\obj\Debug\AppData\Pages\Table\RatingsPage.baml
